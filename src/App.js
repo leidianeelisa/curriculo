@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { useEffect, useState } from 'react';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch('https://gitconnected.com/v1/portfolio/leidianeelisa')
+      .then(res => res.json())
+      .then(userData => {
+        setTimeout(() => {
+          setUser(userData);
+        }, 1000);
+      });
+  }, []);
+
+  if (!user) {
+    return '<div> Aqui terá um loading component</div>';
+  }
+
+  return '<div> Aqui terá um Page component</div>'
 }
 
 export default App;
