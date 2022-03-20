@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SectionTitle } from '../../styles';
-import { Header, HeaderContainer, Image, ProfileLink, SubHeaderText } from './profileHeaderStyles';
+import { Header, HeaderContainer, Image, Name, ProfileLink, SubHeaderText } from './profileHeaderStyles';
 
 const ProfileHeader = ({ profile }) => {
 	return (
@@ -9,9 +9,9 @@ const ProfileHeader = ({ profile }) => {
 			<Header>
 				<Image src={profile.basics.picture} />
 				<div>
-					<SectionTitle>
+					<Name>
 						{profile.basics.name}
-					</SectionTitle>
+					</Name>
 					<SubHeaderText>
 						{profile.basics.label}
 					</SubHeaderText>
