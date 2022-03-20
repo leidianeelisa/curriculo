@@ -2,24 +2,26 @@ import './App.css';
 
 import { useEffect, useState } from 'react';
 
+import Pages from './pages';
+
 function App() {
-  const [user, setUser] = useState(null);
+  const [profile, setUser] = useState(null);
 
   useEffect(() => {
     fetch('https://gitconnected.com/v1/portfolio/leidianeelisa')
       .then(res => res.json())
-      .then(userData => {
+      .then(data => {
         setTimeout(() => {
-          setUser(userData);
+          setUser(data);
         }, 1000);
       });
   }, []);
 
-  if (!user) {
+  if (!profile) {
     return '<div> Aqui terá um loading component</div>';
   }
 
-  return '<div> Aqui terá um Page component</div>'
+  return <Pages profile={profile} />;
 }
 
 export default App;

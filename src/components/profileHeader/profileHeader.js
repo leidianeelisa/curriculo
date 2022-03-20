@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SectionTitle } from '../../styles';
-import { Header, HeaderContainer } from './profileHeaderStyles';
+import { Header, HeaderContainer, Image, SubHeaderText } from './profileHeaderStyles';
 
 const ProfileHeader = ({ profile }) => {
 	return (
@@ -16,13 +16,13 @@ const ProfileHeader = ({ profile }) => {
 						{profile.basics.label}
 					</SubHeaderText>
 					<b>
-						{user.basics.region}
+						{profile.basics.region}
 					</b>
           <p>
-						{user.basics.headline}
+						{profile.basics.headline}
 					</p>
           <b>
-            {user.basics.yearsOfExperience} anos de experiência como desenvolvedora.
+            {profile.basics.yearsOfExperience} anos de experiência como desenvolvedora.
           </b>
 				</div>
 			</Header>
