@@ -1,4 +1,4 @@
-import { User32, Code32 } from '@carbon/icons-react';
+import { User32, Code32, Enterprise32 } from '@carbon/icons-react';
 import { SideNavLink } from 'carbon-components-react/lib/components/UIShell';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -8,7 +8,8 @@ import { CustomSideNavItems, StyledSideNav } from './sideBarStyles';
 
 const menuItems = [
 	{ name: 'Pessoal', path: '/', icon: User32 },
-	{ name: 'Projetos', path: '/projetos', icon: Code32 }
+	{ name: 'Projetos', path: '/projetos', icon: Code32 },
+	{ name: 'Experiência Profissional', path: '/experiencia-profissional', icon: Enterprise32 }
 ];
 
 const SideBar = () => {

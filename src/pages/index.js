@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Personal from './personal';
 import Projects from './projects';
+import Work from './work';
 
 const Pages = ({ profile }) => {
 	return (
@@ -13,6 +14,10 @@ const Pages = ({ profile }) => {
 			</Routes>
 			<Routes>
 				<Route path="/projetos" element={ <Projects profile={profile} />}>
+				</Route>
+			</Routes>
+			<Routes>
+				<Route path="/experiencia-profissional" element={ <Work profile={profile} />}>
 				</Route>
 			</Routes>
 		</Router>
