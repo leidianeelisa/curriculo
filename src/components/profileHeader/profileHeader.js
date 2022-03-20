@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SectionTitle } from '../../styles';
-import { Header, HeaderContainer, Image, SubHeaderText } from './profileHeaderStyles';
+import { Header, HeaderContainer, Image, ProfileLink, SubHeaderText } from './profileHeaderStyles';
 
 const ProfileHeader = ({ profile }) => {
 	return (
@@ -26,6 +26,19 @@ const ProfileHeader = ({ profile }) => {
           </b>
 				</div>
 			</Header>
+			<div>
+        <SectionTitle>Perfis</SectionTitle>
+        <ul>
+          {profile.basics.profiles.map((data, i) => (
+            <ProfileLink key={data.network}>
+              {i !== 0 && ' | '}
+              <a href={data.url} target="_blank" rel="noreferrer noopener">
+                {data.network}
+              </a>
+            </ProfileLink>
+          ))}
+        </ul>
+      </div>
 		</HeaderContainer>
 	);
 };
