@@ -16,10 +16,12 @@ const Education = ({ profile }) => {
                   {education.studyType}, {education.area}
                 </Degree>{' '}
                 <p>
-                  {education.start.year} to {education.end.year}
+                {education.start.year}
+                {education.start.year ? ' - ' + education.end.year : ''}
                 </p>
               </div>
-              <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
+              {console.log(profile)}
+              <Paragraph>{education.website}</Paragraph>
             </EducationItem>
           ))}
         </ul>
