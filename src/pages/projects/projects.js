@@ -22,13 +22,13 @@ const Projects = ({ profile }) => {
         title="Atenção"
       />
 			 <div>
-        <SectionTitle>Projetos Privados</SectionTitle>
+        <SectionTitle>Projetos</SectionTitle>
         <ul>
 					{console.log(profile)}
           {profile.projects.map((project, i) => (
             <ProjectItem key={i}>
-              <ProjectTitle>{project.name}</ProjectTitle>
-              <p>{project.summary}</p>
+              <ProjectTitle>{project.displayName}</ProjectTitle>
+              <p>{project.description}</p>
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>
