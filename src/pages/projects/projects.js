@@ -10,7 +10,7 @@ const Projects = ({ profile }) => {
 			<InlineNotification
         hideCloseButton={false}
         iconDescription="Fechar notificação"
-        kind="warning"
+        kind="info"
         notificationType="inline"
         role="alert"
         subtitle={

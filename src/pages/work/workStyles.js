@@ -16,5 +16,5 @@ export const JobTitle = styled.p`
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 5px;
-  color: #82c9ff;
+  color: #f1c21b;
 `;
