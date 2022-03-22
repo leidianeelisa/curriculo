@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   if (!profile) {
-    return '<div> Aqui terá um loading component</div>';
+    return '';
   }
 
   return <Pages profile={profile} />;

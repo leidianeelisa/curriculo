@@ -1,5 +1,5 @@
+import { yellow } from '@carbon/colors';
 import styled from 'styled-components';
-import { red50, purple60, yellow, white } from '@carbon/colors';
 
 export const SectionTitle = styled.h3`
   margin-top: 1.5rem;

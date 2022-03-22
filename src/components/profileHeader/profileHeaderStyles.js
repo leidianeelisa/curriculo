@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SectionTitle } from '../../styles';
 
 export const HeaderContainer = styled.div``;
 
